@@ -1,5 +1,5 @@
 ﻿<?php
-	require_once 'connection.php';
+	require_once 'scripts/connection.php';
 	$query = "SELECT * FROM ordrer"; //Alle data i databasen 'ordrer' vælges
 	
 	$results = mysqli_query($connection, $query); //Forespørgsel til databasen vha. de definerede variabler.
@@ -40,7 +40,7 @@
 			<td class='table'><?php echo $row['antal'] ?></td>
 			<td class='table'><?php echo $row['note'] ?></td>
 			<td>
-				<form action="slet_kunde.php" method="post">
+				<form action="scripts/slet_kunde.php" method="post">
 					<input type="submit" value="Slet">
 					<input type="hidden" name="slettet" value="<?php echo $row['kunde_ID'] ?>">
 				</form>

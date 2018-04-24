@@ -8,7 +8,7 @@ if(isset($_POST['slettet'])){
 	$results = mysqli_query($connection, $query);
 	
 	if($results){
-		header("Location: ordrelist.php");
+		header("Location: ../ordrelist.php");
 		exit();
 	}else{
 		die("Kunne ikke oprette forbindelse til database "). mysqli_connect_error();

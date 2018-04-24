@@ -1,5 +1,5 @@
 <?php
-require_once 'connection.php';
+require_once 'scripts/connection.php';
 
 if(isset($_GET['kunid'])){
 	
@@ -28,7 +28,7 @@ if(isset($_GET['kunid'])){
 </head>
 
 <body>
-<form name="rediger_ordre" id="rediger_Ordre" method="post" action="opdaterData.php" autocomplete="on">
+<form name="rediger_ordre" id="rediger_Ordre" method="post" action="scripts/opdaterData.php" autocomplete="on">
 		<fieldset>
 			<legend>Rediger ordre</legend>
 			<div>

@@ -6,7 +6,7 @@
 </head>
 
 <body>
-	<form name="ny_ordre" id="ny_Ordre" method="post" action="ny_ordre.php" autocomplete="on">
+	<form name="ny_ordre" id="ny_Ordre" method="post" action="scripts/ny_ordre.php" autocomplete="on">
 		<fieldset>
 			<legend>Tilføj ordre</legend>
 			<div>
