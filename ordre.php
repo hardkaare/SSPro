@@ -23,7 +23,10 @@
 			</div>
 			<div>
 				<label for="rute">Rute</label>
-				<input type="text" required name="rute" id="rute">
+				<!-- <input type="rute" name="rute" id="rute">-->
+				<input type="radio" required name="rute" id="rute" value="Rute 1" checked>1
+				<input type="radio" required name="rute" id="rute" value="Rute 2">2
+				<input type="radio" required name="rute" id="rute" value="Rute 3">3
 			</div>
 			<div>
 				<label for="str">Størrelse</label>

@@ -12,7 +12,7 @@
 <!doctype html>
 <html lang="da">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
 <title>SSPro - Orderlist</title>
 </head>
 
@@ -40,13 +40,13 @@
 			<td class='table'><?php echo $row['antal'] ?></td>
 			<td class='table'><?php echo $row['note'] ?></td>
 			<td>
-				<form action="scripts/slet_kunde.php" method="post">
+				<a href="rediger_ordre.php?kunid=<?php echo $row['kunde_ID']?>" class="butRed"><input type="button" value="Rediger"></a></input>
+			</td>
+			<td>
+				<form action="scripts/slet_kunde.php" method="post" onClick="return confirm('Er du sikker på du vil slette kunden?')">
 					<input type="submit" value="Slet">
 					<input type="hidden" name="slettet" value="<?php echo $row['kunde_ID'] ?>">
 				</form>
-			</td>
-			<td>
-				<a href="rediger_ordre.php?kunid=<?php echo $row['kunde_ID']?>" class="butRed"><input type="button" value="Rediger"></a></input>
 			</td>
 		</tr>
 	<?php } ?>
