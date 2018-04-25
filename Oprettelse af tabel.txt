@@ -1,4 +1,6 @@
-﻿CREATE TABLE `ordrer` (
+﻿//Lav database kaldt 'SSPro' - herefter laves tabellen 'ordrer':
+
+CREATE TABLE `ordrer` (
 `kunde_ID` int(11) NOT NULL,
 `kunde` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
 `d_date` date NOT NULL,
@@ -8,3 +10,6 @@
 `antal` int(20) NOT NULL,
 `note` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL
 );
+
+//Indsæt værdier ind i tabel
+INSERT INTO ordrer VALUES('','Luke', 'Skywalker', 'Jedi', 'lukesky@jediorder.com', '004512323231', 'untitled.png');
