@@ -1,12 +1,11 @@
 ﻿<?php
-	require_once 'scripts/connection.php';
-	$query = "SELECT * FROM ordrer"; //Alle data i databasen 'ordrer' vælges
-	
-	$results = mysqli_query($connection, $query); //Forespørgsel til databasen vha. de definerede variabler.
-
-	if(!$results){
-		die("Kunne ikke oprette forbindelse til databasen".mysqli_error());
-	}
+require 'functions.php';
+connectdb();
+queryMysql("SELECT * FROM ordrer");
+global $row;
+//Datoer angives som variabler for at kunne konvertere til andet datoformat.
+$d_date = date_create($row['d_date']);
+$n_date = date_create($row['n_date']);
 ?>
 
 <!doctype html>
@@ -15,8 +14,6 @@
 <meta charset="utf-8">
 <title>SSPro - Ordrelist</title>
 </head>
-
-
 <body>
 	<table>
 		<tr>
@@ -32,10 +29,6 @@
 	<?php
 	while($row=mysqli_fetch_assoc($results)) { ?>
 		<tr>
-		<?php //Datoer angives som variabler for at kunne konvertere til andet datoformat.
-			$d_date = date_create($row['d_date']);
-			$n_date = date_create($row['n_date']);
-		?>
 			<td class='table'><?php echo $row['kunde'] ?></td>
 			<td class='table'><?php echo date_format($d_date, 'd/m/y') ?></td>
 			<td class='table'><?php echo date_format($n_date, 'd/m/y') ?></td>

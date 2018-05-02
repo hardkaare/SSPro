@@ -1,23 +1,7 @@
 <?php
-require_once 'scripts/connection.php';
-
-if(isset($_GET['kunid'])){
-	
-	$kunde_id=htmlentities($_GET['kunid']);
-	
-	if(!empty($kunde_id)){
-		
-		$query = "SELECT * FROM ordrer WHERE kunde_ID= $kunde_id";
-		
-		$results = mysqli_query($connection,$query);
-		
-		if(!$results){
-			die("Kunne ikke oprette forbindelse til databasen".mysqli_error($connection));
-		}
-		
-		$row = mysqli_fetch_assoc($results);
-	}
-}
+require_once 'functions.php';
+connectdb();
+sort_kundeID();
 ?>
 
 <!doctype html>
