@@ -1,3 +1,8 @@
+<?php
+	include('scripts/ny_ordre.php');
+?>
+
+
 <!doctype html>
 <html>
 <head>
@@ -24,9 +29,16 @@
 			<div>
 				<label for="rute">Rute</label>
 				<!-- <input type="rute" name="rute" id="rute">-->
-				<input type="radio" required name="rute" id="rute" value="Rute 1" checked>1
+				<select name="rute" id="rute">
+					<option value="Rute 1">Rute 1</option>
+					<option value="Rute 2">Rute 2</option>
+					<option value="Rute 3">Rute 3</option>
+					<option value="Niels Jernes Vej 6A">Niels Jernes Vej 6A</option>
+					<option value="Niels Jernes Vej 8A">Niels Jernes Vej 8A</option>
+				</select>
+<!--				<input type="radio" required name="rute" id="rute" value="Rute 1" checked>1
 				<input type="radio" required name="rute" id="rute" value="Rute 2">2
-				<input type="radio" required name="rute" id="rute" value="Rute 3">3
+				<input type="radio" required name="rute" id="rute" value="Rute 3">3-->
 			</div>
 			<div>
 				<label for="str">Størrelse</label>
@@ -46,6 +58,5 @@
 			</div>
 		</fieldset>
 	</form>
-
 </body>
 </html>

@@ -1,19 +1,19 @@
 ﻿<?php
-require 'functions.php';
+header( 'Content-Type: text/html; charset=utf-8' );
+require_once 'scripts/functions.php';
 connectdb();
-queryMysql("SELECT * FROM ordrer");
+queryMysql( "SELECT * FROM ordrer" );
 global $row;
-//Datoer angives som variabler for at kunne konvertere til andet datoformat.
-$d_date = date_create($row['d_date']);
-$n_date = date_create($row['n_date']);
 ?>
 
 <!doctype html>
 <html lang="da">
+
 <head>
-<meta charset="utf-8">
-<title>SSPro - Ordrelist</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>SSPro - Ordrelist</title>
 </head>
+
 <body>
 	<table>
 		<tr>
@@ -25,9 +25,10 @@ $n_date = date_create($row['n_date']);
 			<th class='table'>Antal</th>
 			<th class='table'>Bemærkninger</th>
 		</tr>
-		
-	<?php
-	while($row=mysqli_fetch_assoc($results)) { ?>
+			<?php
+	while($row=mysqli_fetch_assoc($results)) { 
+		$d_date = date_create( $row[ 'd_date' ] );
+		$n_date = date_create( $row[ 'n_date' ] );?>
 		<tr>
 			<td class='table'><?php echo $row['kunde'] ?></td>
 			<td class='table'><?php echo date_format($d_date, 'd/m/y') ?></td>
@@ -48,18 +49,18 @@ $n_date = date_create($row['n_date']);
 		</tr>
 	<?php } ?>
 	</table>
-	
-	<form action="ordre.php" method="POST">
-		<input type="submit" value="Tilføj ordre" >
+
+	<form action="ny_ordre.php" method="POST">
+		<input type="submit" value="Tilføj ordre">
 	</form>
 	<form action="ruter.php" method="get">
 		<input type="submit" value="Eksporter ordreliste">
 	</form>
 </body>
-</html>
 
+</html>
 
 <?php
 //Luk forbindelse til database
-mysqli_close($connection);
+mysqli_close( $connection );
 ?>

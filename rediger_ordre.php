@@ -1,7 +1,9 @@
 <?php
-require_once 'functions.php';
+require_once 'scripts/functions.php';
+global $kunde_id;
+global $row;
 connectdb();
-sort_kundeID();
+get_id();
 ?>
 
 <!doctype html>
@@ -25,7 +27,7 @@ sort_kundeID();
 			</div>
 			<div>
 				<label for="n_date">Nedtagningsdato</label>
-				<input type="date" name="n_date" id="n_date" value="<?php echo $row['n_date']?>">
+				<input type="date" required name="n_date" id="n_date" value="<?php echo $row['n_date']?>">
 			</div>
 			<div>
 				<label for="rute">Rute</label>
@@ -47,7 +49,7 @@ sort_kundeID();
 			<div class="tlfBtnDiv">
 				<input type="submit" id="submit" value="Rediger">
 			</div>
-			<input type="hidden" name="kunde_id" value="<?php echo $kunde_id?>">
+			<input type="hidden" name="kunde_ID" value="<?php echo $kunde_ID?>">
 		</fieldset>
 	</form>
 
