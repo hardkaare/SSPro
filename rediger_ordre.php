@@ -1,9 +1,16 @@
 <?php
 require_once 'scripts/functions.php';
-global $kunde_id;
-global $row;
 connectdb();
-get_id();
+
+if(isset($_GET['id'])){
+	
+	$kunde_id=htmlentities($_GET['id']);
+	
+	if(!empty($kunde_id)){
+		queryMysql("SELECT * FROM ordrer WHERE kunde_ID= $kunde_id");
+		$row = mysqli_fetch_assoc($results);
+	}
+}
 ?>
 
 <!doctype html>
@@ -27,7 +34,7 @@ get_id();
 			</div>
 			<div>
 				<label for="n_date">Nedtagningsdato</label>
-				<input type="date" required name="n_date" id="n_date" value="<?php echo $row['n_date']?>">
+				<input type="date" name="n_date" id="n_date" value="<?php echo $row['n_date']?>">
 			</div>
 			<div>
 				<label for="rute">Rute</label>
@@ -49,7 +56,7 @@ get_id();
 			<div class="tlfBtnDiv">
 				<input type="submit" id="submit" value="Rediger">
 			</div>
-			<input type="hidden" name="kunde_ID" value="<?php echo $kunde_ID?>">
+			<input type="hidden" name="kunde_id" value="<?php echo $kunde_id?>">
 		</fieldset>
 	</form>
 

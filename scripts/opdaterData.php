@@ -1,10 +1,9 @@
 <?php
-require_once 'functions.php';
-connectdb();
+require_once 'connection.php';
 
-if(isset($_POST['kunde'])&&isset($_POST['kunde_ID'])){
+if(isset($_POST['kunde'])&&isset($_POST['kunde_id'])){
 				$kunde=htmlentities($_POST['kunde']);
-				$kunde_ID=htmlentities($_POST['kunde_ID']);
+				$kunde_id=htmlentities($_POST['kunde_id']);
 				
 				if(isset($_POST['d_date'])){
 					$d_date = htmlentities($_POST['d_date']);
@@ -41,8 +40,8 @@ if(isset($_POST['kunde'])&&isset($_POST['kunde_ID'])){
 					$note="";
 				}
 				
-				if(!empty($kunde)&&!empty($kunde_ID)){
-					$query = "UPDATE ordrer SET kunde='$kunde',d_date='$d_date',n_date='$n_date',rute='$rute',str='$str',antal='$antal',note='$note' WHERE kunde_id = '$kunde_ID';";
+				if(!empty($kunde)&&!empty($kunde_id)){
+					$query = "UPDATE ordrer SET kunde='$kunde',d_date='$d_date',n_date='$n_date',rute='$rute',str='$str',antal='$antal',note='$note' WHERE kunde_id = '$kunde_id';";
 				echo $query;
 					
    					$results = mysqli_query($connection,$query);
