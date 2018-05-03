@@ -31,8 +31,8 @@ global $row;
 		$n_date = date_create( $row[ 'n_date' ] );?>
 		<tr>
 			<td class='table'><?php echo $row['kunde'] ?></td>
-			<td class='table'><?php echo date_format($d_date, 'd/m/y') ?></td>
-			<td class='table'><?php echo date_format($n_date, 'd/m/y') ?></td>
+			<td class='table'><?php echo date_format($d_date, 'd-m-Y') ?></td>
+			<td class='table'><?php echo date_format($n_date, 'd-m-Y') ?></td>
 			<td class='table'><?php echo $row['rute'] ?></td>
 			<td class='table'><?php echo $row['str'] ?></td>
 			<td class='table'><?php echo $row['antal'] ?></td>
@@ -41,7 +41,7 @@ global $row;
 				<a href="rediger_ordre.php?kunid=<?php echo $row['kunde_ID']?>" class="butRed"><input type="button" value="Rediger"></a></input>
 			</td>
 			<td>
-				<form action="scripts/slet_kunde.php" method="post" onClick="return confirm('Er du sikker på du vil slette ordren?')">
+				<form action="scripts/slet_kunde.php" method="post" onClick="return confirm('Er du sikker på du vil slette kunden?')">
 					<input type="submit" value="Slet">
 					<input type="hidden" name="slettet" value="<?php echo $row['kunde_ID'] ?>">
 				</form>
