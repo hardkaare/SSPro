@@ -1,13 +1,19 @@
+<<<<<<< HEAD
 ﻿//Lav database kaldt 'SSPro' - herefter laves tabellen 'ordrer':
 
 CREATE TABLE `ordrer` (
 `kunde_ID` int(11) NOT NULL AUTO_INCREMENT,
+=======
+﻿CREATE TABLE `ordrer` (
+`kunde_ID` int(11) NOT NULL,
+>>>>>>> parent of 81fc25a... Nyt nyt nyt
 `kunde` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
 `d_date` date NOT NULL,
 `n_date` date DEFAULT NULL,
 `rute` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
 `str` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
 `antal` int(20) NOT NULL,
+<<<<<<< HEAD
 `note` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
 PRIMARY KEY (kunde_ID)
 );
@@ -16,3 +22,7 @@ PRIMARY KEY (kunde_ID)
 INSERT INTO ordrer VALUES('','Studentersamfundet','2018-03-22','2018-05-02','Rute 1','A4','100','Ingen bemærkninger');
 INSERT INTO ordrer VALUES('','Accenture','2018-05-02','2018-06-02','Rute 2', 'A5','200','Skal kun op på hver anden tavle');
 INSERT INTO ordrer VALUES('','IDA Engineering','2018-04-20','2018-05-20','Nyhavnsgade 14','A3','50','Begrænset antal, prøv og placer plakaterne så godt som muligt.');
+=======
+`note` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL
+);
+>>>>>>> parent of 81fc25a... Nyt nyt nyt

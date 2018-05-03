@@ -10,8 +10,13 @@ global $row;
 <html lang="da">
 
 <head>
+<<<<<<< HEAD
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>SSPro - Ordrelist</title>
+=======
+<meta charset="utf-8">
+<title>SSPro - Orderlist</title>
+>>>>>>> parent of 81fc25a... Nyt nyt nyt
 </head>
 
 <body>
@@ -31,8 +36,13 @@ global $row;
 		$n_date = date_create( $row[ 'n_date' ] );?>
 		<tr>
 			<td class='table'><?php echo $row['kunde'] ?></td>
+<<<<<<< HEAD
 			<td class='table'><?php echo date_format($d_date, 'd/m/y') ?></td>
 			<td class='table'><?php echo date_format($n_date, 'd/m/y') ?></td>
+=======
+			<td class='table'><?php echo $row['d_date'] ?></td>
+			<td class='table'><?php echo $row['n_date'] ?></td>
+>>>>>>> parent of 81fc25a... Nyt nyt nyt
 			<td class='table'><?php echo $row['rute'] ?></td>
 			<td class='table'><?php echo $row['str'] ?></td>
 			<td class='table'><?php echo $row['antal'] ?></td>
@@ -53,7 +63,7 @@ global $row;
 	<form action="ny_ordre.php" method="POST">
 		<input type="submit" value="Tilføj ordre">
 	</form>
-	<form action="ruter.php" method="get">
+	<form action="eksporter.php" method="get">
 		<input type="submit" value="Eksporter ordreliste">
 	</form>
 </body>
