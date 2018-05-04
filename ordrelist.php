@@ -11,6 +11,7 @@ queryMysql( "SELECT * FROM ordrer" );
 	<meta charset="utf-8">
 	<title>SSPro - Ordrelist</title>
 	<link href="styling.css" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 
