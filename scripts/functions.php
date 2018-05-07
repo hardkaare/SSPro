@@ -9,11 +9,11 @@ $db_database = 'SSPro';
 
 //Funktionen til at oprette forbindelse til serveren.
 function connectdb() {
-global $db_server;
-global $db_user;
-global $db_pass;
-global $db_database;
-global $connection;
+	global $db_server;
+	global $db_user;
+	global $db_pass;
+	global $db_database;
+	global $connection;
 	$connection = mysqli_connect( $db_server, $db_user, $db_pass, $db_database ); //Forbindelsen til databasen defineres med udgangspunkt i definerede forbindelsesvariabler.
 
 	// Hvis ikke der oprettes forbindelse til databasen.
