@@ -1,7 +1,7 @@
 ﻿<?php
 require 'scripts/functions.php';
-require 'login/session.php';
-connectdb();
+require 'session.php';
+require 'config.php';
 queryMysql( "SELECT * FROM ordrer" );
 ?>
 

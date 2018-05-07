@@ -1,8 +1,7 @@
 <?php
-   require '..\..\scripts\functions.php';
+include 'config.php';
    session_start();
-connectdb();
-   
+
    $user_check = $_SESSION['login_user'];
    
    $ses_sql = mysqli_query($connection,"SELECT email FROM brugere WHERE email = '$user_check' ");
