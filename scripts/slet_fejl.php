@@ -3,9 +3,9 @@ require_once 'connection.php';
 require_once 'functions.php';
 
 if(isset($_POST['slettet'])){
-	$kunde_ID = $_POST['slettet'];
-	queryMysql("DELETE FROM ordrer WHERE kunde_ID=" ."'" .$kunde_ID. "'");
-	header("Location: ../ordrelist.php");
+	$fejl_ID = $_POST['slettet'];
+	queryMysql("DELETE FROM fejlmelding WHERE fejl_ID=" ."'" .$fejl_ID. "'");
+	header("Location: ../fejlmelding.php");
 	exit();
 }
 	//Luk forbindelse til databasen

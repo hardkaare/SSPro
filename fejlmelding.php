@@ -1,8 +1,8 @@
-﻿<?php
+<?php
 require 'scripts/functions.php';
 require 'scripts/connection.php';
 require 'scripts/session.php';
-queryMysql( "SELECT * FROM ordrer" );
+queryMysql( "SELECT * FROM fejlmelding" );
 ?>
 
 <!doctype html>
@@ -10,7 +10,7 @@ queryMysql( "SELECT * FROM ordrer" );
 
 <head>
 	<meta charset="utf-8">
-	<title>SPOT Administration - Ordreliste</title>
+	<title>SPOT Administration - Rediger ordre</title>
 	<link href="styling.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
@@ -19,12 +19,11 @@ queryMysql( "SELECT * FROM ordrer" );
 	<!--Siden til print af ruter-->
 </head>
 
-
 <body>
 	<div class="sidenav">
-		<a href="ordrelist.php" class="big_nav" id="current">Ordreliste</a>
+		<a href="ordrelist.php" class="big_nav">Ordreliste</a>
 		<a href="ny_ordre.php" class="small_nav">Tilføj ordre</a>
-		<a href="fejlmelding.php" class="big_nav">Fejlmelding</a>
+		<a href="fejlmelding.php" class="big_nav" id="current">Fejlmelding</a>
 		<a href="ny_fejl.php" class="small_nav">Fejlmeld tavle</a>
 		<a href="ruter.php" class="big_nav">Ruter</a>
 		<a onclick="frames['frame'].print()" class="small_nav">Print ruteliste</a>
@@ -32,15 +31,13 @@ queryMysql( "SELECT * FROM ordrer" );
 	</div>
 
 	<div class="main">
-		<h2>Ordreliste</h2>
+		<h2>Fejlmeldinger</h2>
 		<table class="orderlist">
 			<tr>
-				<th class='table'>Kunde</th>
-				<th class='table'>Distributionsdato</th>
-				<th class='table'>Nedtagningsdato</th>
-				<th class='table'>Rute</th>
-				<th class='table'>Størrelse</th>
-				<th class='table'>Antal</th>
+				<th class='table'>Adresse</th>
+				<th class='table'>Etage</th>
+				<th class='table'>Tavle</th>
+				<th class='table'>Fejlmeldt dato</th>
 				<th class='table'>Bemærkninger</th>
 			</tr>
 
@@ -49,43 +46,35 @@ queryMysql( "SELECT * FROM ordrer" );
 				?>
 			<tr>
 				<?php //Datoer angives som variabler for at kunne konvertere til andet datoformat.
-			$d_date = date_create($row['d_date']);
-			$n_date = date_create($row['n_date']);
-			?>
+			$f_date = date_create($row['f_date']);
+		?>
 				<td class='table'>
-					<?php echo $row['kunde'] ?>
+					<?php echo $row['adresse'] ?>
 				</td>
 				<td class='table'>
-					<?php echo date_format($d_date, 'd/m/y') ?>
+					<?php echo $row['etage'] ?>
 				</td>
 				<td class='table'>
-					<?php echo date_format($n_date, 'd/m/y') ?>
+					<?php echo $row['tavlenr'] ?>
 				</td>
 				<td class='table'>
-					<?php echo $row['rute'] ?>
-				</td>
-				<td class='table'>
-					<?php echo $row['str'] ?>
-				</td>
-				<td class='table'>
-					<?php echo $row['antal'] ?>
+					<?php echo date_format($f_date, 'd/m/y') ?>
 				</td>
 				<td class='table'>
 					<?php echo $row['note'] ?>
 				</td>
 				<td id="tdBtn">
-					<a href="rediger_ordre.php?id=<?php echo $row['kunde_ID']?>" class="butRed"><input type="button" value="Rediger"></a>
-					</input>
-				</td>
-				<td id="tdBtn">
-					<form action="main/scripts/slet_kunde.php" method="post" onClick="return confirm('Er du sikker på du vil slette ordren?')">
-						<input type="submit" value="Slet">
-						<input type="hidden" name="slettet" value="<?php echo $row['kunde_ID'] ?>">
+					<form class="action_form" action="scripts/slet_fejl.php" method="post" onClick="return confirm('Er du sikker på du vil slette fejlmeldingen?')">
+						<input type="submit" value="Afklaret">
+						<input type="hidden" name="slettet" value="<?php echo $row['fejl_ID'] ?>">
 					</form>
 				</td>
 			</tr>
 			<?php } ?>
 		</table>
+		<form action="ny_fejl.php" method="POST">
+			<input type="submit" value="Ny fejlmelding">
+		</form>
 	</div>
 </body>
 

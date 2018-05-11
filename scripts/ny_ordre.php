@@ -1,6 +1,6 @@
 <?php
 require_once 'functions.php';
-connectdb();
+require_once 'connection.php';
 
 if(isset($_POST['kunde'])){
 				$kunde=htmlentities($_POST['kunde']);
@@ -44,8 +44,6 @@ if(isset($_POST['kunde'])){
 					queryMysql("INSERT INTO ordrer VALUES ('','$kunde','$d_date','$n_date','$rute','$str','$antal','$note')");
 				}	
 				header('Location: ../ordrelist.php');
-			}else{
-				echo "Noget gik galt";
 			}
 			
 mysqli_close($connection);

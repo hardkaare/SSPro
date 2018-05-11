@@ -6,6 +6,67 @@ html {
     font-family: "Source Sans Pro";
 }
 
+/* Login Siden */
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+.main_login {
+    margin: auto;
+    text-align: center;
+    padding: 2rem;
+}
+
+.form_login{
+    margin:auto;
+    border: 3px solid #f1f1f1;
+    padding: 1rem 4rem;
+    max-width: 25%;
+    min-width: 25%;
+    height: auto;
+    font-family: "PT Sans";
+}
+
+.form_login h2{
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+}
+
+.login_input{
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.login_btn {
+    padding: 14px 20px;
+    margin: 8px 0;
+    background-color: green;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.login_btn:hover{
+    opacity: 0.8;
+}
+
+.login_label {
+}
+
+.login_error_msg {
+    color: red;
+    text-align: center;
+}
+
  /* The sidebar menu */
 .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
@@ -23,9 +84,22 @@ html {
 .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 25px;
     color: #818181;
     display: block;
+	cursor: pointer;
+}
+
+.sidenav .big_nav {
+    font-size: 25px;
+}
+
+.sidenav .small_nav{
+    font-size: 20px;
+    padding: 0 0 5px 25px;
+}
+
+#current {
+	color: red;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -43,7 +117,7 @@ html {
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-} 
+}
 
 .orderlist {
 	border-collapse: collapse;
