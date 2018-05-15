@@ -32,8 +32,8 @@ queryMysql( "SELECT * FROM ordrer" );
 	</div>
 
 	<div class="main">
-		<h2>Ordreliste</h2>
-		<table class="orderlist">
+	<h2>Ordreliste</h2>
+		<table>
 			<tr>
 				<th class='table'>Kunde</th>
 				<th class='table'>Distributionsdato</th>

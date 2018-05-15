@@ -72,9 +72,6 @@ queryMysql( "SELECT * FROM fejlmelding" );
 			</tr>
 			<?php } ?>
 		</table>
-		<form action="ny_fejl.php" method="POST">
-			<input type="submit" value="Ny fejlmelding">
-		</form>
 	</div>
 </body>
 

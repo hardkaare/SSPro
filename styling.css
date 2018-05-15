@@ -2,16 +2,7 @@
 	box-sizing: border-box;
 }
 
-html {
-    font-family: "Source Sans Pro";
-}
-
 /* Login Siden */
-@media only screen and (max-width: 600px) {
-    body {
-        background-color: lightblue;
-    }
-}
 .main_login {
     margin: auto;
     text-align: center;
@@ -70,60 +61,119 @@ html {
  /* The sidebar menu */
 .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 160px; /* Set the width of the sidebar */
+    width: 10%; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #111; /* Black */
+    background-color: #145014; /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
+    padding-top: 1%;
+    font-family: "PT Sans";
 }
 
 /* The navigation menu links */
 .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    color: #818181;
+    color: white;
     display: block;
 	cursor: pointer;
 }
 
 .sidenav .big_nav {
-    font-size: 25px;
+    font-size: 1.7rem;
 }
 
 .sidenav .small_nav{
-    font-size: 20px;
+    font-size: 1.4rem;
     padding: 0 0 5px 25px;
 }
 
 #current {
-	color: red;
+	color: #A1B9A1;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: #A1B9A1;
 }
 
 /* Style page content */
 .main {
-    margin-left: 160px; /* Same as the width of the sidebar */
+    margin-left: 10%; /* Same as the width of the sidebar */
+    margin-top: 2%;
     padding: 0px 10px;
+    width: 100%;
+    font-family: "Source Sans Pro";
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+.main h2 {
+    font-family: "PT Sans";
 }
 
-.orderlist {
-	border-collapse: collapse;
+.main table {
+    border-collapse: collapse;
+    width: 90%;
 }
 
-.orderlist td, .orderlist th{
-	border: 1px solid #ddd;
-	padding: 8px;
+.main table th {
+    font-size: 1.3rem;
+}
+
+.main table td {
+    font-size: 1rem;
+}
+
+.main table td, main table th {
+    border: 1px solid #ddd;
+    padding: 8px;    
+}
+
+#tdBtn {
+    border: none;
+    width: 0.1%;
+}
+
+#tdBtn input {
+    margin: 8px 0;
+    padding: 6px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+#tdBtn a {
+    text-decoration: none;
+}
+
+.main form {
+    width: 90%;
+}
+
+.main form input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.main form label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+.main input[type=submit], [type=button] {
+    background-color: #437343;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+.main input[type=submit]:hover{
+    background-color: #A1B9A1;
 }

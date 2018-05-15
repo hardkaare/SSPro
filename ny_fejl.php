@@ -24,9 +24,8 @@
 	<a href="scripts/logout.php" class="big_nav">Log ud</a>
 </div>
 		<div class="main">
+		<h2>Fejlmeld tavle</h2>
 	<form name="ny_fejlmelding" id="ny_fejlmelding" method="post" action="scripts/ny_fejlmelding.php" autocomplete="on">
-		<fieldset>
-			<legend>Fejlmeld tavle</legend>
 			<div>
 				<label for="adresse">Adresse</label>
 				<select name="adresse" id="adresse" required>
@@ -62,7 +61,6 @@
 			<div class="tlfBtnDiv">
 				<input type="submit" id="submit" value="Fejlmeld">
 			</div>
-		</fieldset>
 	</form>
 	</div>
 </body>

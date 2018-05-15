@@ -47,9 +47,8 @@ if ( isset( $_GET[ 'id' ] ) ) {
 		</div>
 
 		<div class="main">
+		<h2>Rediger Ordre</h2>
 			<form name="rediger_ordre" id="rediger_Ordre" method="post" action="scripts/opdaterData.php" autocomplete="on">
-				<fieldset>
-					<legend>Rediger ordre</legend>
 					<div>
 						<label for="kunde">Kunde</label>
 						<input type="text" required name="kunde" id="kunde" value="<?php echo $row['kunde']?>">
@@ -71,8 +70,8 @@ if ( isset( $_GET[ 'id' ] ) ) {
 						<input type="text" required name="str" id="str" value="<?php echo $row['str']?>">
 					</div>
 					<div>
-						<label for="antaæ">Antal</label>
-						<input type="number" required name="antal" id="antal" value="<?php echo $row['antal']?>">
+						<label for="antal">Antal</label>
+						<input type="text" required name="antal" id="antal" value="<?php echo $row['antal']?>">
 					</div>
 					<div>
 						<label for="note">Bemærkninger</label>
@@ -85,7 +84,6 @@ if ( isset( $_GET[ 'id' ] ) ) {
 						<input type="submit" id="submit" value="Tilføj ændringer">
 					</div>
 					<input type="hidden" name="kunde_id" value="<?php echo $kunde_id?>">
-				</fieldset>
 			</form>
 		</div>
 	</body>

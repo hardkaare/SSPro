@@ -11,7 +11,7 @@ queryMysql( "SELECT * FROM ordrer ORDER BY rute ASC" );
 <head>
 	<meta charset="utf-8">
 	<title>SPOT Administration - Print Ruteliste</title>
-	<link href="print.css" rel="stylesheet" type="text/css">
+	<link href="styling.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>

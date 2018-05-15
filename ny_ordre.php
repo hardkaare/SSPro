@@ -28,23 +28,22 @@ include 'scripts/ny_ordre.php';
 	</div>
 
 	<div class="main">
+	<h2>Tilføj ordre</h2>
 		<form name="ny_ordre" id="ny_Ordre" method="post" action="scripts/ny_ordre.php" autocomplete="on">
-			<fieldset>
-				<legend>Tilføj ordre</legend>
 				<div>
-					<label for="kunde">Kunde</label>
+					<label for="kunde">Kunde:</label>
 					<input type="text" required name="kunde" id="kunde">
 				</div>
 				<div>
-					<label for="d_date">Distributionsdato</label>
+					<label for="d_date">Distributionsdato:</label>
 					<input type="date" required name="d_date" id="d_date">
 				</div>
 				<div>
-					<label for="n_date">Nedtagningsdato</label>
+					<label for="n_date">Nedtagningsdato:</label>
 					<input type="date" name="n_date" id="n_date">
 				</div>
 				<div>
-					<label for="rute">Rute</label>
+					<label for="rute">Rute:</label>
 					<select name="rute" id="rute" required>
 						<option value="Rute 1">Rute 1</option>
 						<option value="Rute 2">Rute 2</option>
@@ -63,24 +62,22 @@ include 'scripts/ny_ordre.php';
 					</select>
 				</div>
 				<div>
-					<label for="str">Størrelse</label>
+					<label for="str">Størrelse:</label>
 					<input type="text" required name="str" id="str">
 				</div>
 				<div>
-					<label for="antal">Antal</label>
-					<input type="number" required name="antal" id="antal">
+					<label for="antal">Antal:</label>
+					<input type="text" required name="antal" id="antal">
 				</div>
 				<div>
-					<label for="note">Bemærkninger</label>
+					<label for="note">Bemærkninger:</label>
 					<textarea name="note" id="note" cols="30" rows="1"></textarea>
 				</div>
 
 				<div class="tlfBtnDiv">
 					<input type="submit" id="submit" value="Tilføj">
-				</div>
-			</fieldset>
+			</div>
 		</form>
 	</div>
 </body>
-
 </html>
