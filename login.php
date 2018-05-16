@@ -2,18 +2,16 @@
 require 'scripts/functions.php';
 require 'scripts/connection.php';
 session_start();
-$error = " - ";
+$error = "";
 
 if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
-	// username and password sent from form 
+	// Brugernavn og password sendt fra formen - brug af method POST.
 	global $db;
 	$email = mysqli_real_escape_string( $connection, $_POST[ 'email' ] );
 	$password = mysqli_real_escape_string( $connection, $_POST[ 'password' ] );
 
 	queryMysql( "SELECT id FROM brugere WHERE email = '$email' and password = '$password'" );
 	$row = mysqli_fetch_array( $results, MYSQLI_ASSOC );
-	global $active;
-	$active = $row[ 'active' ];
 
 	$count = mysqli_num_rows( $results );
 
