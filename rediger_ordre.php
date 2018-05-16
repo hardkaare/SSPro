@@ -47,34 +47,35 @@ if ( isset( $_GET[ 'id' ] ) ) {
 		</div>
 
 		<div class="main">
-		<h2>Rediger Ordre</h2>
+		<h2>Rediger ordre</h2>
+		<div class="form-container">
 			<form name="rediger_ordre" id="rediger_Ordre" method="post" action="scripts/opdaterData.php" autocomplete="on">
 					<div>
-						<label for="kunde">Kunde</label>
+						<label for="kunde">Kunde:</label>
 						<input type="text" required name="kunde" id="kunde" value="<?php echo $row['kunde']?>">
 					</div>
 					<div>
-						<label for="d_date">Distributionsdato</label>
+						<label for="d_date">Distributionsdato:</label>
 						<input type="date" required name="d_date" id="d_date" value="<?php echo $row['d_date']?>">
 					</div>
 					<div>
-						<label for="n_date">Nedtagningsdato</label>
+						<label for="n_date">Nedtagningsdato:</label>
 						<input type="date" name="n_date" id="n_date" value="<?php echo $row['n_date']?>">
 					</div>
 					<div>
-						<label for="rute">Rute</label>
+						<label for="rute">Rute:</label>
 						<input type="text" required name="rute" id="rute" value="<?php echo $row['rute']?>">
 					</div>
 					<div>
-						<label for="str">Størrelse</label>
+						<label for="str">Størrelse:</label>
 						<input type="text" required name="str" id="str" value="<?php echo $row['str']?>">
 					</div>
 					<div>
-						<label for="antal">Antal</label>
+						<label for="antal">Antal:</label>
 						<input type="text" required name="antal" id="antal" value="<?php echo $row['antal']?>">
 					</div>
 					<div>
-						<label for="note">Bemærkninger</label>
+						<label for="note">Bemærkninger:</label>
 						<textarea name="note" id="note" cols="30" rows="1">
 							<?php echo $row['note']?>
 						</textarea>
@@ -85,6 +86,7 @@ if ( isset( $_GET[ 'id' ] ) ) {
 					</div>
 					<input type="hidden" name="kunde_id" value="<?php echo $kunde_id?>">
 			</form>
+			</div>
 		</div>
 	</body>
 

@@ -1,6 +1,6 @@
 ﻿//Lav database kaldt 'SSPro' - herefter laves tabellen 'brugere':
 CREATE TABLE `brugere` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `password` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `active` tinyint(4) NOT NULL,
@@ -13,7 +13,7 @@ INSERT INTO `brugere` (`id`, `email`, `password`, `active`) VALUES
 
 //Tabellen 'ordrer' laves.
 CREATE TABLE `ordrer` (
-  `kunde_ID` int(11) NOT NULL,
+  `kunde_ID` int(11) NOT NULL AUTO_INCREMENT,
   `kunde` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `d_date` date NOT NULL,
   `n_date` date DEFAULT NULL,
@@ -30,7 +30,8 @@ INSERT INTO ordrer VALUES('','Accenture','2018-05-02','2018-06-02','Rute 2', 'A5
 INSERT INTO ordrer VALUES('','IDA Engineering','2018-04-20','2018-05-20','Nyhavnsgade 14','A3','50','Begrænset antal, prøv og placer plakaterne så godt som muligt.');
 
 //Tabellen 'fejlmelding' laves.
-  `fejl_ID` int(11) NOT NULL,
+CREATE TABLE `fejlmelding` (
+  `fejl_ID` int(11) NOT NULL AUTO_INCREMENT,
   `adresse` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `etage` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `tavlenr` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
