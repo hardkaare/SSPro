@@ -47,9 +47,9 @@ if ( isset( $_GET[ 'id' ] ) ) {
 		</div>
 
 		<div class="main">
-		<h2>Rediger ordre</h2>
-		<div class="form-container">
-			<form name="rediger_ordre" id="rediger_Ordre" method="post" action="scripts/opdaterData.php" autocomplete="on">
+			<h2>Rediger ordre</h2>
+			<div class="form_container">
+				<form name="rediger_ordre" id="rediger_Ordre" method="post" action="scripts/opdaterData.php" autocomplete="on">
 					<div>
 						<label for="kunde">Kunde:</label>
 						<input type="text" required name="kunde" id="kunde" value="<?php echo $row['kunde']?>">
@@ -81,11 +81,11 @@ if ( isset( $_GET[ 'id' ] ) ) {
 						</textarea>
 					</div>
 
-					<div class="tlfBtnDiv">
+					<div class="tlfBtn">
 						<input type="submit" id="submit" value="Tilføj ændringer">
 					</div>
 					<input type="hidden" name="kunde_id" value="<?php echo $kunde_id?>">
-			</form>
+				</form>
 			</div>
 		</div>
 	</body>

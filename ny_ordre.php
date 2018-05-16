@@ -29,56 +29,54 @@ include 'scripts/ny_ordre.php';
 
 	<div class="main">
 		<h2>Tilføj ordre</h2>
-		<div class="form-container">
+		<div class="form_container">
 			<form name="ny_ordre" id="ny_Ordre" method="post" action="scripts/ny_ordre.php" autocomplete="on">
 				<div>
-					<div class="input">
-						<label for="kunde">Kunde:</label>
-						<input type="text" required name="kunde" id="kunde">
-					</div>
-					<div class="input">
-						<label for="d_date">Distributionsdato:</label>
-						<input type="date" required name="d_date" id="d_date">
-					</div>
-					<div class="input">
-						<label for="n_date">Nedtagningsdato:</label>
-						<input type="date" name="n_date" id="n_date">
-					</div>
-					<div class="input">
-						<label for="rute">Rute:</label>
-						<select name="rute" id="rute" required>
-							<option value="Rute 1">Rute 1</option>
-							<option value="Rute 2">Rute 2</option>
-							<option value="Rute 3">Rute 3</option>
-							<option value="Badehusvej">Badehusvej</option>
-							<option value="Fibigerstræde">Fibigerstræde</option>
-							<option value="Fredrik Bajers Vej">Fredrik Bajers Vej</option>
-							<option value="Kroghstræde">Kroghstræde</option>
-							<option value="Niels Jernes Vej">Niels Jernes Vej</option>
-							<option value="Nyhavnsgade">Nyhavnsgade</option>
-							<option value="Pontoppidanstræde">Pontoppidanstræde</option>
-							<option value="Rendsburggade">Rendsburggade</option>
-							<option value="Selma Lagerløfs Vej (Cassiopeia)">Selma Lagerløfs Vej (Cassiopeia)</option>
-							<option value="Skibbrogade">Skibbrogade</option>
-							<option value="Strandvejen">Strandvejen</option>
-						</select>
-					</div>
-					<div class="input">
-						<label for="str">Størrelse:</label>
-						<input type="text" required name="str" id="str">
-					</div>
-					<div class="input">
-						<label for="antal">Antal:</label>
-						<input type="text" required name="antal" id="antal">
-					</div>
-					<div class="input">
-						<label for="note">Bemærkninger:</label>
-						<textarea name="note" id="note" cols="30" rows="1"></textarea>
-					</div>
+					<label for="kunde">Kunde:</label>
+					<input type="text" required name="kunde" id="kunde">
+				</div>
+				<div>
+					<label for="d_date">Distributionsdato:</label>
+					<input type="date" required name="d_date" id="d_date">
+				</div>
+				<div>
+					<label for="n_date">Nedtagningsdato:</label>
+					<input type="date" name="n_date" id="n_date">
+				</div>
+				<div>
+					<label for="rute">Rute:</label>
+					<select name="rute" id="rute" required>
+						<option value="Rute 1">Rute 1</option>
+						<option value="Rute 2">Rute 2</option>
+						<option value="Rute 3">Rute 3</option>
+						<option value="Badehusvej">Badehusvej</option>
+						<option value="Fibigerstræde">Fibigerstræde</option>
+						<option value="Fredrik Bajers Vej">Fredrik Bajers Vej</option>
+						<option value="Kroghstræde">Kroghstræde</option>
+						<option value="Niels Jernes Vej">Niels Jernes Vej</option>
+						<option value="Nyhavnsgade">Nyhavnsgade</option>
+						<option value="Pontoppidanstræde">Pontoppidanstræde</option>
+						<option value="Rendsburggade">Rendsburggade</option>
+						<option value="Selma Lagerløfs Vej (Cassiopeia)">Selma Lagerløfs Vej (Cassiopeia)</option>
+						<option value="Skibbrogade">Skibbrogade</option>
+						<option value="Strandvejen">Strandvejen</option>
+					</select>
+				</div>
+				<div>
+					<label for="str">Størrelse:</label>
+					<input type="text" required name="str" id="str">
+				</div>
+				<div>
+					<label for="antal">Antal:</label>
+					<input type="text" required name="antal" id="antal">
+				</div>
+				<div>
+					<label for="note">Bemærkninger:</label>
+					<textarea name="note" id="note" cols="30" rows="1"></textarea>
+				</div>
 
-					<div class="tlfBtnDiv">
-						<input type="submit" id="submit" value="Tilføj">
-					</div>
+				<div class="tlfBtn">
+					<input type="submit" id="submit" value="Tilføj">
 				</div>
 			</form>
 		</div>

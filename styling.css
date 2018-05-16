@@ -2,6 +2,10 @@
 	box-sizing: border-box;
 }
 
+html {
+    font-family: "Source Sans Pro";
+}
+
 /* Login Siden */
 .main_login {
     margin: auto;
@@ -107,7 +111,7 @@
     margin-left: 13%; /* Same as the width of the sidebar */
     margin-top: 2%;
     padding: 0px 10px;
-    width: 100%;
+    width: 87%;
     font-family: "Source Sans Pro";
 }
 
@@ -117,7 +121,7 @@
 
 .main table {
     border-collapse: collapse;
-    width: 87%;
+    width: 100%;
 }
 
 .main table th {
@@ -151,25 +155,25 @@
 }
 
 .main form {
-    width: 87%;
+    width: 25%;
+    margin: 1%;
 }
 
-.main .input {
-    width: 20%;
+.main .form_container input, select, textarea {
+    border: 1px solid #ccc;
     padding: 12px;
-    border 1px solid #ccc;
     border-radius: 4px;
+    width: 100%;
     resize: vertical;
+}
+
+#n_date, #d_date {
+    width: 100%;
 }
 
 .main form label {
     padding: 12px 12px 12px 0;
     display: inline-block;
-}
-
-.main input {
-    font-family: "Source Sans Pro";
-    font-size: 1rem;
 }
 
 .main input[type=submit], [type=button] {
@@ -179,9 +183,13 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    float: left;
 }
 
 .main input[type=submit]:hover{
     background-color: #A1B9A1;
+}
+
+.tlfBtn {
+    margin: 10px auto;
+    width: 30%;
 }
