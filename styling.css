@@ -16,6 +16,7 @@ html {
 .form_login{
     margin:auto;
     border: 3px solid #f1f1f1;
+    border-radius: 4px;
     padding: 1rem 4rem;
     max-width: 25%;
     min-width: 25%;
@@ -26,7 +27,7 @@ html {
 .form_login h2{
     width: 100%;
     text-align: center;
-    font-size: 28px;
+    font-size: 1.6rem;
 }
 
 .login_input{

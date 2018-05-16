@@ -2,7 +2,7 @@
 require 'scripts/functions.php';
 require 'scripts/connection.php';
 session_start();
-$error = " ";
+$error = " - ";
 
 if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
 	// username and password sent from form 
@@ -24,7 +24,7 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
 
 		header( "location: ordrelist.php" );
 	} else {
-		$error = "Your Login Name or Password is invalid";
+		$error = "Din email eller adgangskode er forkert.";
 	}
 }
 ?>
@@ -46,7 +46,7 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
 <body>
 
 	<div class="main_login">
-		<h2>SPOT Administration</h2>
+		<h1>SPOT Administration</h1>
 		<p>AAU's interne administrationsystem til SPOT-tavler</p>
 	</div>
 	<form class="form_login" action="" method="post" accept-charset="utf-8">
@@ -65,4 +65,5 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
 		</span>
 	</form>
 </body>
+
 </html>

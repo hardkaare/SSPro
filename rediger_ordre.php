@@ -15,15 +15,7 @@ if ( isset( $_GET[ 'id' ] ) ) {
 ?>
 
 <!doctype html>
-<html>
-
-<head>
-	<meta charset="utf-8">
-	<title>SSPro - Rediger ordre</title>
-</head>
-
-<body>
-
+<html lang="da">
 	<head>
 		<meta charset="utf-8">
 		<title>SPOT Administration - Rediger ordre</title>
@@ -93,7 +85,7 @@ if ( isset( $_GET[ 'id' ] ) ) {
 </html>
 
 
-<?php 
+<?php
 //Luk forbindelsen
 mysqli_close($connection);
 ?>

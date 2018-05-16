@@ -17,7 +17,7 @@ $connection = mysqli_connect( $db_server, $db_user, $db_pass, $db_database ); //
 
 // Hvis ikke der oprettes forbindelse til databasen.
 if ( mysqli_connect_error() ) {
-	printf( "Forbindelse til database fejlet: %s\n", mysqli_connect_error() ); //Fejlmeddelelse skrives følges af mysql fejl.
+	printf( "Forbindelse til database fejlet: ", mysqli_connect_error() ); //Fejlmeddelelse skrives følges af mysql fejl.
 	exit(); //Scriptet slutter.
 }
 //Skifte karaktersættet i MySQL til "utf8" således at databasen også opgiver dansk tegnsætning (æøå).

@@ -1,0 +1,3 @@
+Ny_fejl.php
+- Ændre så at f_date er konstant, og dermed angiver datoen for den dag det er.
+- Value i etage defineres som 1, i tilfælde af forvirring omkring SPOT-stedet uden flere etager end 1.

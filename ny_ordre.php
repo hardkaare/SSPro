@@ -3,7 +3,7 @@ include 'scripts/ny_ordre.php';
 ?>
 
 <!doctype html>
-<html>
+<html lang="da">
 
 <head>
 	<meta charset="utf-8">

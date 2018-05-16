@@ -25,9 +25,16 @@ CREATE TABLE `ordrer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 //Indsæt værdier ind i tabellen ordrer.
-INSERT INTO ordrer VALUES('','Studentersamfundet','2018-03-22','2018-05-02','Rute 1','A4','100','Ingen bemærkninger');
-INSERT INTO ordrer VALUES('','Accenture','2018-05-02','2018-06-02','Rute 2', 'A5','200','Skal kun op på hver anden tavle');
-INSERT INTO ordrer VALUES('','IDA Engineering','2018-04-20','2018-05-20','Nyhavnsgade 14','A3','50','Begrænset antal, prøv og placer plakaterne så godt som muligt.');
+INSERT INTO `ordrer` (`kunde_ID`, `kunde`, `d_date`, `n_date`, `rute`, `str`, `antal`, `note`) VALUES
+('', 'Studentersamfundet', '2018-05-01', '2018-06-30', 'Badehusvej', 'A4', 50, 'Beh&oslash;ves ikke.'),
+('', 'AAU Karriere', '2018-05-01', '2018-06-30', 'Rute 1', 'A3', 50, ''),
+('', 'Accenture', '2018-05-01', '2018-06-30', 'Rute 1', 'A3', 100, 'Distribueres kun i n&aelig;rheden af BSc. studerende.'),
+('', 'Prosa', '2018-05-01', '2018-06-01', 'Rute 1', 'A5', 20, ''),
+('', 'IDA Engineering', '2018-05-01', '2018-06-30', 'Rute 1', 'A4', 50, 'Begr&aelig;ns til hver anden tavle'),
+('', 'Studentersamfundet', '2018-05-01', '2018-06-30', 'Rute 2', 'A4', 200, ''),
+('', 'Studentersamfundet', '2018-04-14', '2018-06-14', 'Rute 3', 'A4', 100, ''),
+('', 'AAU Karriere', '2018-05-01', '2018-06-30', 'Nyhavnsgade', 'A3', 20, ''),
+('', 'IDA Engineering', '2018-05-01', '2018-06-30', 'Selma Lagerl&oslash;fs Vej (Cassiopeia)', 'A4', 15, '');
 
 //Tabellen 'fejlmelding' laves.
 CREATE TABLE `fejlmelding` (
@@ -39,3 +46,9 @@ CREATE TABLE `fejlmelding` (
   `note` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (fejl_ID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+//Indsæt værdier ind i tabellen 'fejlmelding'.
+INSERT INTO `fejlmelding` (`fejl_ID`, `adresse`, `etage`, `tavlenr`, `f_date`, `note`) VALUES
+('', 'Badehusvej', '1', 'nr. 211', '2018-05-01', 'Stj&aring;let'),
+('', 'Rendsburggade', '1', 'nr. 432', '2018-05-02', 'Udsat for h&aelig;rv&aelig;rk.'),
+('', 'Kroghstr&aelig;de', '2', 'nr. 1', '2018-05-15', 'Beskadiget, mangler vedh&aelig;ng til ops&aelig;tning.');

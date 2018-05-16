@@ -2,7 +2,7 @@
 include 'scripts/ny_fejlmelding.php';
 ?>
 <!doctype html>
-<html>
+<html lang="da">
 
 <head>
 	<meta charset="utf-8">
