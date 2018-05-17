@@ -13,8 +13,9 @@ html {
     padding: 2rem;
 }
 
+/* Login formen */
 .form_login{
-    margin:auto;
+    margin: auto; /* Centreres på siden */
     border: 3px solid #f1f1f1;
     border-radius: 4px;
     padding: 1rem 4rem;
@@ -61,26 +62,26 @@ html {
 .login_label {
 }
 
-.login_error_msg {
+.login_error_msg { /* Fejlmeddelelse som skal være i rød */
     color: red;
     text-align: center;
 }
 
- /* The sidebar menu */
+ /* Navbar menu */
 .sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 13%; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    height: 100%; /* Skal fylde hele siden */
+    width: 13%; /* Bredde på navbar */
+    position: fixed; /* Bliver på dens plads når der scrolles */
+    z-index: 1; /* Skal være forrest */
+    top: 0; /* Skal blive i toppen */
     left: 0;
-    background-color: #145014; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
+    background-color: #145014; /* Baggrundsfarve */
+    overflow-x: hidden; /* Slå horisontalt scroll fra */
     padding-top: 1%;
     font-family: "PT Sans";
 }
 
-/* The navigation menu links */
+/* Navigations links */
 .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
@@ -102,14 +103,14 @@ html {
 	color: #A1B9A1;
 }
 
-/* When you mouse over the navigation links, change their color */
+/* Skift af farve ved hover af links i navbar */
 .sidenav a:hover {
     color: #A1B9A1;
 }
 
-/* Style page content */
+/* Main indhold */
 .main {
-    margin-left: 13%; /* Same as the width of the sidebar */
+    margin-left: 13%; /* Samme bredde som navbar */
     margin-top: 2%;
     padding: 0px 10px;
     width: 87%;
@@ -126,7 +127,7 @@ html {
 }
 
 .main table th {
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .main table td {
@@ -135,7 +136,7 @@ html {
 
 .main table td, main table th {
     border: 1px solid #ddd;
-    padding: 8px;    
+    padding: 8px;
 }
 
 #tdBtn {

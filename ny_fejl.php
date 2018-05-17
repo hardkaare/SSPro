@@ -1,5 +1,5 @@
 <?php
-include 'scripts/ny_fejlmelding.php';
+require 'scripts/session.php';
 ?>
 <!doctype html>
 <html lang="da">

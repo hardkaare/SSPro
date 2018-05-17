@@ -7,7 +7,6 @@ queryMysql( "SELECT * FROM ordrer" );
 
 <!doctype html>
 <html lang="da">
-
 <head>
 	<meta charset="utf-8">
 	<title>SPOT Administration - Ordreliste</title>
@@ -45,7 +44,7 @@ queryMysql( "SELECT * FROM ordrer" );
 			</tr>
 
 			<?php
-			while ( $row = mysqli_fetch_assoc( $results ) ) {
+			while ( $row = mysqli_fetch_array( $results ) ) {
 				?>
 			<tr>
 				<?php //Datoer angives som variabler for at kunne konvertere til andet datoformat.

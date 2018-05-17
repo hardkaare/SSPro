@@ -1,5 +1,5 @@
 <?php
-include 'scripts/ny_ordre.php';
+require 'scripts/session.php';
 ?>
 
 <!doctype html>

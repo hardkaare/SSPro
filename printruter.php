@@ -25,7 +25,7 @@ queryMysql( "SELECT * FROM ordrer ORDER BY rute ASC" );
 			<th class='table'>Antal</th>
 			<th class='table'>Bemærkninger</th>
 		</tr>
-		<?php while($row=mysqli_fetch_assoc($results)) { ?>
+		<?php while($row=mysqli_fetch_array($results)) { ?>
 		<tr>
 			<?php //Datoer angives som variabler for at kunne konvertere til andet datoformat.
 			$d_date = date_create($row['d_date']);

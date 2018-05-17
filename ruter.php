@@ -43,7 +43,7 @@ queryMysql( "SELECT * FROM ordrer ORDER BY rute ASC" );
 			</tr>
 
 			<?php
-			while ( $row = mysqli_fetch_assoc( $results ) ) {
+			while ( $row = mysqli_fetch_array( $results ) ) {
 				?>
 			<tr>
 				<?php //Datoer angives som variabler for at kunne konvertere til andet datoformat.
