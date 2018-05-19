@@ -21,6 +21,7 @@ queryMysql( "SELECT * FROM fejlmelding" );
 
 <body>
 	<div class="sidenav">
+		<img class="banner" src="img/banner.png" width=100%/>
 		<a href="ordrelist.php" class="big_nav">Ordreliste</a>
 		<a href="ny_ordre.php" class="small_nav">Tilføj ordre</a>
 		<a href="fejlmelding.php" class="big_nav" id="current">Fejlmelding</a>

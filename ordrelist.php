@@ -21,6 +21,7 @@ queryMysql( "SELECT * FROM ordrer" );
 
 <body>
 	<div class="sidenav">
+		<img class="banner" src="img/banner.png" width=100%/>
 		<a href="ordrelist.php" class="big_nav" id="current">Ordreliste</a>
 		<a href="ny_ordre.php" class="small_nav">Tilføj ordre</a>
 		<a href="fejlmelding.php" class="big_nav">Fejlmelding</a>
@@ -77,7 +78,7 @@ queryMysql( "SELECT * FROM ordrer" );
 					</input>
 				</td>
 				<td id="tdBtn">
-					<form action="main/scripts/slet_kunde.php" method="post" onClick="return confirm('Er du sikker på du vil slette ordren?')">
+					<form action="scripts/slet_kunde.php" method="post" onClick="return confirm('Er du sikker på du vil slette ordren?')">
 						<input type="submit" value="Slet">
 						<input type="hidden" name="slettet" value="<?php echo $row['kunde_ID'] ?>">
 					</form>
@@ -87,7 +88,6 @@ queryMysql( "SELECT * FROM ordrer" );
 		</table>
 	</div>
 </body>
-
 </html>
 <?php
 //Luk forbindelse til database

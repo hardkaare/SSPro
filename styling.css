@@ -51,7 +51,6 @@ html {
     width: 100%;
     font-size: 1.2rem;
     font-family: "PT Sans";
-    font-weight: 700;
     border-radius: 4px;
 }
 
@@ -149,7 +148,7 @@ html {
     padding: 6px 10px;
     border: none;
     cursor: pointer;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 #tdBtn a {
@@ -167,6 +166,8 @@ html {
     border-radius: 4px;
     width: 100%;
     resize: vertical;
+    font-family: "PT Sans";
+    font-size: 1rem;
 }
 
 #n_date, #d_date {
@@ -176,6 +177,7 @@ html {
 .main form label {
     padding: 12px 12px 12px 0;
     display: inline-block;
+    font-size: 1.1rem;
 }
 
 .main input[type=submit], [type=button] {
@@ -185,6 +187,8 @@ html {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-family: "PT Sans";
+    font-size: 1rem;
 }
 
 .main input[type=submit]:hover{
@@ -193,5 +197,5 @@ html {
 
 .tlfBtn {
     margin: 10px auto;
-    width: 30%;
+    width: 40%;
 }

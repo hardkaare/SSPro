@@ -29,6 +29,7 @@ if ( isset( $_GET[ 'id' ] ) ) {
 
 	<body>
 		<div class="sidenav">
+			<img class="banner" src="img/banner.png" width=100%/>
 			<a href="ordrelist.php" class="big_nav">Ordreliste</a>
 			<a href="ny_ordre.php" class="small_nav">Tilføj ordre</a>
 			<a href="fejlmelding.php" class="big_nav">Fejlmelding</a>
@@ -68,9 +69,7 @@ if ( isset( $_GET[ 'id' ] ) ) {
 					</div>
 					<div>
 						<label for="note">Bemærkninger:</label>
-						<textarea name="note" id="note" cols="30" rows="1">
-							<?php echo $row['note']?>
-						</textarea>
+						<textarea name="note" id="note" cols='30' rows='1'><?php echo $row['note'];?></textarea>
 					</div>
 
 					<div class="tlfBtn">
