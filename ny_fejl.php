@@ -48,8 +48,8 @@ require 'scripts/session.php';
 						<option value="Strandvejen">Strandvejen</option>
 					</select>
 					<div>
-						<label for="etage" value="1">Etage:</label>
-						<input type="text" required name="etage" id="etage" maxlength="10">
+						<label for="etage">Etage:</label>
+						<input type="text" required name="etage" id="etage" maxlength="10" value="1">
 					</div>
 					<div>
 						<label for="tavle">Tavle nr.:</label>
