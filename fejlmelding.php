@@ -10,7 +10,7 @@ queryMysql( "SELECT * FROM fejlmelding" );
 
 <head>
 	<meta charset="utf-8">
-	<title>SPOT Administration - Rediger ordre</title>
+	<title>SPOT Administration - Fejlmeldinger</title>
 	<link href="styling.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">

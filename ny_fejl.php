@@ -6,7 +6,7 @@ require 'scripts/session.php';
 
 <head>
 	<meta charset="utf-8">
-	<title>SPOT Administration - Rediger ordre</title>
+	<title>SPOT Administration - Fejlmeld tavle</title>
 	<link href="styling.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
@@ -48,7 +48,7 @@ require 'scripts/session.php';
 						<option value="Strandvejen">Strandvejen</option>
 					</select>
 					<div>
-						<label for="etage">Etage:</label>
+						<label for="etage" value="1">Etage:</label>
 						<input type="text" required name="etage" id="etage" maxlength="10">
 					</div>
 					<div>
@@ -57,7 +57,7 @@ require 'scripts/session.php';
 					</div>
 					<div>
 						<label for="f_date">Dato fejlmeldt:</label>
-						<input type="date" required name="f_date" id="f_date">
+						<input type="date" required name="f_date" id="f_date" value="<?php echo date("Y-m-d"); ?>"/>
 					</div>
 					<div>
 						<label for="note">Bemærkninger:</label>
