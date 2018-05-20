@@ -138,6 +138,11 @@ html {
     padding: 8px;
 }
 
+#btn {
+    float: left;
+    display: inline-block;
+}
+
 #tdBtn {
     border: none;
     width: 0.1%;
@@ -191,7 +196,7 @@ html {
     font-size: 1rem;
 }
 
-.main input[type=submit]:hover{
+.main input[type=submit]:hover, [type=button]:hover{
     background-color: #A1B9A1;
 }
 

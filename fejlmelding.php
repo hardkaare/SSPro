@@ -34,7 +34,7 @@ queryMysql( "SELECT * FROM fejlmelding" );
 	</div>
 
 	<div class="main">
-		<h2>Fejlmeldinger</h2>
+		<h2>Fejlmeldte tavler</h2>
 		<table class="orderlist">
 			<tr>
 				<th class='table'>Adresse</th>
@@ -42,6 +42,7 @@ queryMysql( "SELECT * FROM fejlmelding" );
 				<th class='table'>Tavle</th>
 				<th class='table'>Fejlmeldt dato</th>
 				<th class='table'>Bemærkninger</th>
+				<th class='table'>Aktivitet(er)</th>
 			</tr>
 
 			<?php

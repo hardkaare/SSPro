@@ -35,6 +35,7 @@ require 'scripts/session.php';
 				<div>
 					<label for="adresse">Adresse:</label>
 					<select name="adresse" id="adresse" required>
+						<option disabled selected>Vælg adresse</option>
 						<option value="Badehusvej">Badehusvej</option>
 						<option value="Fibigerstræde">Fibigerstræde</option>
 						<option value="Fredrik Bajers Vej">Fredrik Bajers Vej</option>
@@ -49,11 +50,11 @@ require 'scripts/session.php';
 					</select>
 					<div>
 						<label for="etage">Etage:</label>
-						<input type="text" required name="etage" id="etage" maxlength="10" value="1">
+						<input type="text" required name="etage" id="etage" maxlength="10" placeholder="Angiv etage">
 					</div>
 					<div>
 						<label for="tavle">Tavle nr.:</label>
-						<input type="text" name="tavle" id="tavle" maxlength="25">
+						<input type="text" name="tavle" id="tavle" maxlength="25" placeholder="Angiv tavlenummer">
 					</div>
 					<div>
 						<label for="f_date">Dato fejlmeldt:</label>
@@ -61,7 +62,7 @@ require 'scripts/session.php';
 					</div>
 					<div>
 						<label for="note">Bemærkninger:</label>
-						<textarea name="note" id="note" cols="30" rows="1" maxlength="250"></textarea>
+						<textarea name="note" id="note" cols="30" rows="1" maxlength="250" placeholder="Angiv eventuelle bemærkninger"></textarea>
 					</div>
 
 					<div class="tlfBtn">

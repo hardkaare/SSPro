@@ -36,7 +36,7 @@ require 'scripts/session.php';
 			<form name="ny_ordre" id="ny_Ordre" method="post" action="scripts/ny_ordre.php" autocomplete="on">
 				<div>
 					<label for="kunde">Kunde:</label>
-					<input type="text" required name="kunde" id="kunde">
+					<input type="text" required name="kunde" id="kunde" placeholder="Angiv kunde.">
 				</div>
 				<div>
 					<label for="d_date">Distributionsdato:</label>
@@ -49,6 +49,7 @@ require 'scripts/session.php';
 				<div>
 					<label for="rute">Rute:</label>
 					<select name="rute" id="rute" required>
+						<option disabled selected>Vælg rute</option>
 						<option value="Rute 1">Rute 1</option>
 						<option value="Rute 2">Rute 2</option>
 						<option value="Rute 3">Rute 3</option>
@@ -67,15 +68,15 @@ require 'scripts/session.php';
 				</div>
 				<div>
 					<label for="str">Størrelse:</label>
-					<input type="text" required name="str" id="str">
+					<input type="text" required name="str" id="str" placeholder="Angiv materialets størrelse.">
 				</div>
 				<div>
 					<label for="antal">Antal:</label>
-					<input type="text" required name="antal" id="antal">
+					<input type="text" required name="antal" id="antal" placeholder="Angiv antal materialer.">
 				</div>
 				<div>
 					<label for="note">Bemærkninger:</label>
-					<textarea name="note" id="note" cols="30" rows="1"></textarea>
+					<textarea name="note" id="note" cols="30" rows="1" placeholder="Angiv eventuelle bemærkninger."></textarea>
 				</div>
 
 				<div class="tlfBtn">

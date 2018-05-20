@@ -44,6 +44,7 @@ queryMysql( "SELECT * FROM ordrer" );
 				<th class='table'>Størrelse</th>
 				<th class='table'>Antal</th>
 				<th class='table'>Bemærkninger</th>
+				<th class='table'>Aktivitet(er)</th>
 			</tr>
 
 			<?php
@@ -76,12 +77,12 @@ queryMysql( "SELECT * FROM ordrer" );
 					<?php echo $row['note'] ?>
 				</td>
 				<td id="tdBtn">
-					<a href="rediger_ordre.php?id=<?php echo $row['kunde_ID']?>" class="butRed"><input type="button" value="Rediger"></a>
+					<a href="rediger_ordre.php?id=<?php echo $row['kunde_ID']?>" class="butRed" id="btn"><input type="button" value="Rediger" id="btn"></a>
 					</input>
 				</td>
 				<td id="tdBtn">
 					<form action="scripts/slet_kunde.php" method="post" onClick="return confirm('Er du sikker på du vil slette ordren?')">
-						<input type="submit" value="Slet">
+						<input type="submit" value="Slet" id="btn">
 						<input type="hidden" name="slettet" value="<?php echo $row['kunde_ID'] ?>">
 					</form>
 				</td>
