@@ -29,6 +29,8 @@ if ( $_POST ) {//Hvis der bliver sendt brugernavn og password fra formen
 	<link href="styling.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+	<link rel="icon" href="https://studentersamfundet.aau.dk/wp-content/uploads/2017/08/cropped-logomini-32x32.png" sizes="32x32">
+	<link rel="icon" href="https://studentersamfundet.aau.dk/wp-content/uploads/2017/08/cropped-logomini-192x192.png" sizes="192x192">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
